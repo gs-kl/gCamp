@@ -56,5 +56,13 @@
 </div>
 
 <% @quotes.each do |quote| %>
-  <p><%= quote %></p>
+  <blockquote>
+    <p><%= quote[0] %></p>
+    <footer><cite><%= quote[1] %></cite></footer>
+  </blockquote>
 <% end %>
+
+
+
+
+
