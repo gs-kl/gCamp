@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   root 'welcome#home'
 
   get "about" => "welcome#about", as: :about
-
   get "terms" => "welcome#terms", as: :terms
+
+  resources :tasks
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
