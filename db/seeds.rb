@@ -10,3 +10,7 @@
 Quote.create(text: "Failure is not an option. Everyone has to succeed.", author: "Arnold Schwarzenegger")
 Quote.create(text: "Your time is limited, so don't waste it living someone else's life.", author: "Steve Jobs.")
 Quote.create(text: "Better ingredients, better pizza.", author: "Papa John")
+
+Faq.create(question: "What is gCamp?", answer:"Lengthy text from https://students.gschool.it/cohorts/5/daily_plans/2014-11-21")
+Faq.create(question: "How do I join gCamp?", answer:"Lengthy text from https://students.gschool.it/cohorts/5/daily_plans/2014-11-21")
+Faq.create(question: "When will gCamp be finished?", answer:"Lengthy text from https://students.gschool.it/cohorts/5/daily_plans/2014-11-21")
