@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "faq" => "welcome#faq", as: :faq
 
   resources :tasks
+  resources :users
 
 
   # get '/about' => "welcome/about"

@@ -14,3 +14,5 @@ Quote.create(text: "Better ingredients, better pizza.", author: "Papa John")
 Faq.create(question: "What is gCamp?", answer:"Lengthy text from https://students.gschool.it/cohorts/5/daily_plans/2014-11-21")
 Faq.create(question: "How do I join gCamp?", answer:"Lengthy text from https://students.gschool.it/cohorts/5/daily_plans/2014-11-21")
 Faq.create(question: "When will gCamp be finished?", answer:"Lengthy text from https://students.gschool.it/cohorts/5/daily_plans/2014-11-21")
+
+User.create(first_name: "Tim", last_name: "Jones", email: "tim.jones@timjones.com")
