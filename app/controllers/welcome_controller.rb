@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
   end
 
   def faq
-    @faq = Faq.all
+    @faqs = Faq.all
   end
 
 end
