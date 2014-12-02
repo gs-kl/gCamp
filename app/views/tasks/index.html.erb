@@ -1,8 +1,3 @@
-<%= p params %>
-<br><br>
-<%= existing_type_params %>
-
-
 <div class="page-header">
   <div class="pull-right">
     <%= link_to "All", tasks_path %> | <%= link_to 'Incomplete', {:type => "incomplete", :sort => existing_sort_params} %> | <%= link_to 'Complete', {:type => "complete", :sort => existing_sort_params} %> &nbsp; <%= link_to 'New Task', new_task_path, class:"btn btn-info" %>
