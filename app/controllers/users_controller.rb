@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_path, notice: "User was successfully created." }
     end
-
   end
 
   private

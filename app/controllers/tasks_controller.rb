@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+
+
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
 
@@ -6,6 +8,18 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+    if params[:type] == "incomplete"
+      @tasks = @tasks.where(complete: false)
+    elsif params[:type] == "complete"
+      @tasks = @tasks.where(complete: true)
+    end
+    if params[:sort] == "description"
+      @tasks = @tasks.order(:description)
+    elsif params[:sort] == "date"
+      @tasks = @tasks.order(:due_date)
+    elsif params[:sort] == "complete"
+      @tasks = @tasks.order(:complete)
+    end
     respond_to do |format|
       format.html
       format.csv do
