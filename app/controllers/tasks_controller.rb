@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+
     if params[:type] == "incomplete"
       @tasks = @tasks.where(complete: false)
     elsif params[:type] == "complete"
@@ -20,6 +21,7 @@ class TasksController < ApplicationController
     elsif params[:sort] == "complete"
       @tasks = @tasks.order(:complete)
     end
+
     respond_to do |format|
       format.html
       format.csv do

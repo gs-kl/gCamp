@@ -1,12 +1,17 @@
 module TaskHelper
-  def existing_type_params
-    if params[:type]
-      params[:type]
-    end
-  end
-  def existing_sort_params
+  def filter_by parameter
+    new_parameters = {:type => parameter}
     if params[:sort]
-      params[:sort]
+      new_parameters[:sort] = params[:sort]
     end
+    new_parameters
+  end
+
+  def sort_by parameter
+    new_parameters = {:sort => parameter}
+    if params[:type]
+      new_parameters[:type] = params[:type]
+    end
+    new_parameters
   end
 end

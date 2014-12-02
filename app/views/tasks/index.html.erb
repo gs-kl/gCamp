@@ -1,6 +1,6 @@
 <div class="page-header">
   <div class="pull-right">
-    <%= link_to "All", tasks_path %> | <%= link_to 'Incomplete', {:type => "incomplete", :sort => existing_sort_params} %> | <%= link_to 'Complete', {:type => "complete", :sort => existing_sort_params} %> &nbsp; <%= link_to 'New Task', new_task_path, class:"btn btn-info" %>
+    <%= link_to "All", tasks_path %> | <%= link_to 'Incomplete', filter_by("incomplete") %> | <%= link_to 'Complete', filter_by("complete") %> &nbsp; <%= link_to 'New Task', new_task_path, class:"btn btn-info" %>
   </div>
   <h1>Tasks</h1>
 </div>
@@ -8,9 +8,9 @@
 <table class="table">
   <thead>
     <tr>
-      <th><%= link_to "Description", {:sort => "description", :type => existing_type_params} %></th>
-      <th><%= link_to "Date", {:sort => "date", :type => existing_type_params} %></th>
-      <th><%= link_to "Complete?", {:sort => "complete", :type => existing_type_params} %></th>
+      <th><%= link_to "Description", sort_by("description") %></th>
+      <th><%= link_to "Date", sort_by("date") %></th>
+      <th><%= link_to "Complete?", sort_by("complete") %></th>
       <th colspan="1"></th>
     </tr>
   </thead>
