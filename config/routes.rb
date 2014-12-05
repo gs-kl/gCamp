@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :tasks
   resources :users
+  resources :projects
 
 
   # get '/about' => "welcome/about"
