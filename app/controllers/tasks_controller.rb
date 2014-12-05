@@ -22,14 +22,20 @@ class TasksController < ApplicationController
       @tasks = @tasks.order(:complete)
     end
 
-    respond_to do |format|
-      format.html
-      format.csv do
-        headers['Content-Disposition'] = "attachment; filename=\"task-list\""
-        headers['Content-Type'] ||= 'text/csv'
-      end
-    end
+    # respond_to do |format|
+    #   format.html
+      # format.csv do
+      #   headers['Content-Disposition'] = "attachment; filename=\"task-list\""
+      #   headers['Content-Type'] ||= 'text/csv'
+      # end
+    # end
   end
+
+
+
+
+
+
 
   # GET /tasks/1
   # GET /tasks/1.json

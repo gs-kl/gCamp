@@ -22,6 +22,13 @@
       <tr>
         <td><%= user.first_name %> <%= user.last_name %></td>
         <td><%= user.email %></td>
+        <td>
+          <div class="pull-right">
+            <%= link_to "Show", user, class:"btn btn-xs btn-success" %>
+            <%= link_to "Edit", edit_user_path(user), class:"btn btn-xs btn-info" %>
+            <%= link_to "Destroy", user, class:"btn btn-xs btn-danger", method: :delete %>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>
