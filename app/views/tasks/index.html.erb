@@ -1,6 +1,21 @@
 <div class="page-header">
   <div class="pull-right">
-    <%= link_to "All", tasks_path %> | <%= link_to 'Incomplete', filter_by("incomplete") %> | <%= link_to 'Complete', filter_by("complete") %> &nbsp; <%= link_to 'New Task', new_task_path, class:"btn btn-info" %>
+    <% if params[:type].nil? %>
+      All |
+    <% else %>
+      <%= link_to "All", tasks_path %> | 
+    <% end %>
+    <% if params[:type] == "incomplete" %>
+      Incomplete | 
+    <% else %>
+      <%= link_to 'Incomplete', filter_by("incomplete") %> | 
+    <% end %>
+    <% if params[:type] == "complete" %>
+      Complete |
+    <% else %>
+      <%= link_to 'Complete', filter_by("complete") %> 
+    <% end %>
+    &nbsp; <%= link_to 'New Task', new_task_path, class:"btn btn-info" %>
   </div>
   <h1>Tasks</h1>
 </div>
