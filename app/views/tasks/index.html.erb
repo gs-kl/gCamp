@@ -11,7 +11,7 @@
       <%= link_to 'Incomplete', filter_by("incomplete") %> | 
     <% end %>
     <% if params[:type] == "complete" %>
-      Complete |
+      Complete
     <% else %>
       <%= link_to 'Complete', filter_by("complete") %> 
     <% end %>
@@ -24,7 +24,7 @@
   <thead>
     <tr>
       <th><%= link_to "Description", sort_by("description") %></th>
-      <th><%= link_to "Date", sort_by("date") %></th>
+      <th><%= link_to "Due date", sort_by("date") %></th>
       <th><%= link_to "Complete?", sort_by("complete") %></th>
       <th colspan="1"></th>
     </tr>
