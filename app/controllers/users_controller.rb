@@ -16,10 +16,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    # redirect_to users_path
-    respond_to do |format|
-      format.html { redirect_to users_path, notice: "User was successfully created." }
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to users_path, notice: "User was successfully created."
+    else
+      render :new
     end
   end
 
@@ -32,8 +33,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
-    redirect_to users_path
+    if @user.update(user_params)
+      redirect_to users_path, notice: "User was successfully updated."
+    else
+      render :edit
+    end
   end
 
   private
