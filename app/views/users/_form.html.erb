@@ -1,14 +1,4 @@
-<% if @user.errors.any? %>
-  <div class="bg-danger">
-    <p><%= pluralize(@user.errors.count, "error")%> prevented this record from being saved.</p>
-  <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-  </div>
-<% end %>
-
+<%= render "shared/errors", item: @user %>
 
 <%= form_for(@user, html:{class:"form-horizontal"}) do |f| %>
 
