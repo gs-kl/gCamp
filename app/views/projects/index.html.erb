@@ -22,9 +22,9 @@
         <td><%= project.name %></td>
         <td>
           <div class="pull-right">
-            <%= link_to "Show", project, class:"btn btn-xs btn-success" %>
-            <%= link_to "Edit", edit_project_path(project), class:"btn btn-xs btn-info" %>
-            <%= link_to "Destroy", project, class:"btn btn-xs btn-danger", method: :delete %>
+            <%= link_to "Show", project, class:"btn btn-xs btn-success", id:"show-project-#{project.id}-action" %>
+            <%= link_to "Edit", edit_project_path(project), class:"btn btn-xs btn-info", id:"edit-project-#{project.id}-action" %>
+            <%= link_to "Destroy", project, class:"btn btn-xs btn-danger", id:"delete-project-#{project.id}-action", method: :delete %>
           </div>
         </td>
       </tr>
