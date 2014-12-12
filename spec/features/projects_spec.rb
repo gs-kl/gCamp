@@ -28,7 +28,7 @@ feature "projects" do
     click_on "Projects"
     click_on "edit-project-#{project.id}-action"
     fill_in "Name", with: "My new new project"
-    click_on "Edit project"
+    click_on "Update project"
 
     expect(page).to have_content("My new new project")
   end
